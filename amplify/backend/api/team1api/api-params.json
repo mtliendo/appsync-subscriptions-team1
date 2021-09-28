@@ -1,0 +1,40 @@
+{
+  "paths": [
+    {
+      "name": "/status",
+      "lambdaFunction": "statusfunc",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/PUT",
+          "/PATCH"
+        ]
+      },
+      "policyResourceName": "/status"
+    }
+  ],
+  "resourceName": "team1api",
+  "apiName": "team1api",
+  "functionArns": [
+    {
+      "lambdaFunction": "statusfunc"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-appsyncteam1-dev-215226-authRole",
+    "unAuthRoleName": "amplify-appsyncteam1-dev-215226-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "statusfunc",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
