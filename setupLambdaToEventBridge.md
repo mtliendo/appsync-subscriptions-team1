@@ -1,4 +1,4 @@
-# How to get a function to publish an event to EventBridge
+# How to get a AWS Amplify to publish an event to EventBridge
 
 > SDK docs for EventBridge: https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EventBridge.html#putEvents-property
 
