@@ -47,7 +47,7 @@ exports.handler = async (event) => {
 	const params = {
 		Entries: [
 			{
-				EventBusName: 'healthStatus',
+				EventBusName: 'healthStatus', // see footnote on x-account access
 				Source: 'team.status',
 				DetailType: 'Order Notification',
 				Detail: JSON.stringify({ healthStatus }),
@@ -158,3 +158,34 @@ export default function Home() {
 ```
 
 3. Start the application and confirm both the Lambda logs and EventBridge logs in Cloudwatch.
+
+---
+
+## Cross Account Access
+
+If the event is to be put in a bus located in another account, modify the name to contain the ARN of the receiving bus. The ARN is best stored as an [environment secret](https://docs.amplify.aws/cli/function/secrets/#configuring-secret-values).
+
+Also ensure that the receiving account has the correct resource policy setup to allow this account access to the eventbus in that account:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "CrossAccountEventPublishing",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::[ACCOUNT-A]:root"
+			},
+			"Action": "events:PutEvents",
+			"Resource": "arn:aws:events:[REGION]:[ACCOUNT-B]:event-bus/[EVENTBUS_NAME]",
+			"Condition": {
+				"StringEquals": {
+					"events:detail-type": "string-to-lockdown-by-detail-type",
+					"events:source": "string-to-lockdown-by-source"
+				}
+			}
+		}
+	]
+}
+```
