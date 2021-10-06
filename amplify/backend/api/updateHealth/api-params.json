@@ -1,0 +1,41 @@
+{
+  "paths": [
+    {
+      "name": "/status",
+      "lambdaFunction": "healthFunc",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST"
+        ],
+        "unauth": [
+          "/POST"
+        ]
+      },
+      "policyResourceName": "/status"
+    }
+  ],
+  "resourceName": "updateHealth",
+  "apiName": "updateHealth",
+  "functionArns": [
+    {
+      "lambdaFunction": "healthFunc"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-appsyncsubscriptions-dev-220542-authRole",
+    "unAuthRoleName": "amplify-appsyncsubscriptions-dev-220542-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "healthFunc",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

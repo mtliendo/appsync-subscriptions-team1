@@ -1,0 +1,9 @@
+{
+  "policies": [
+    {
+      "Effect": "Allow",
+      "Action": [],
+      "Resource": []
+    }
+  ]
+}
