@@ -110,6 +110,8 @@ exports.handler = async (event) => {
 3. Back in the left sidebar, select "Rules" under "Events".
 4. Select the event bus you'd like to use and click "Create Rule".
 5. Give the rule a name and a description.
+   - **Make sure to hit save**
+   - **If the rule pattern is ever updated, make sure to hit update at the very bottom**
 6. Select the event pattern JSON you'd like to use to match by.
 
 - eg: `{"source": ["team.status"]}`
@@ -117,6 +119,9 @@ exports.handler = async (event) => {
 
 7. To log to Cloudwatch, under targets, select "Cloudwatch log group"
 8. **IMPORTANT**: At the time of this writing, for permissions to be correctly set, the log group **must** start with `/aws/events/`.
+9. Click "Create" or "Update" at the bottom of the page.
+
+- **If the rule pattern is ever updated, make sure to hit update at the very bottom**
 
 ### Testing
 
