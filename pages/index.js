@@ -2,7 +2,7 @@ import { API } from 'aws-amplify'
 
 export default function Home() {
 	const updateStatus = async (healthStatus) => {
-		await API.post('updateHealth', '/status', {
+		await API.post('team1Status', '/status', {
 			body: { healthStatus },
 		})
 			.then((data) => console.log(data))

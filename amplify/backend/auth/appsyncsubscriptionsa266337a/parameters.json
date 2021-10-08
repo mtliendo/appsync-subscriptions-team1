@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "appsyncsubscriptions_identitypool_d706e64d",
+    "identityPoolName": "appsyncsubscriptionsa266337a_identitypool_a266337a",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "appsynd706e64d",
-    "userPoolName": "appsyncsubscriptions_userpool_d706e64d",
+    "resourceNameTruncated": "appsyna266337a",
+    "userPoolName": "appsyncsubscriptionsa266337a_userpool_a266337a",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -29,11 +29,11 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "appsynd706e64d_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "appsyna266337a_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
+    "sharedId": "a266337a",
+    "resourceName": "appsyncsubscriptionsa266337a",
     "authSelections": "identityPoolAndUserPool",
-    "resourceName": "cognitod706e64d",
-    "sharedId": "d706e64d",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -46,19 +46,9 @@
             "Arn"
         ]
     },
-    "hostedUI": false,
-    "useDefault": "manual",
+    "useDefault": "default",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
-    "dependsOn": [],
-    "authProviders": [],
-    "thirdPartyAuth": false,
-    "userPoolGroups": false,
-    "adminQueries": false,
-    "triggers": "{}",
-    "parentStack": {
-        "Ref": "AWS::StackId"
-    },
-    "breakCircularDependency": true,
-    "permissions": []
+    "usernameCaseSensitive": false,
+    "dependsOn": []
 }

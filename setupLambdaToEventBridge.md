@@ -28,6 +28,7 @@ This flow will work well when you have separate teams working within the same AW
 5. Add an API
 
 - `amplify add api`
+- Select `REST`
 - Provide a friendly API name
 - Provide an API path
 - Provide a friendly function name
@@ -189,3 +190,27 @@ Also ensure that the receiving account has the correct resource policy setup to 
 	]
 }
 ```
+
+{"description":"$.detail.description","healthStatus":"$.detail.healthStatus","name":"$.detail.name","updatedAt":"$.time"}
+
+{
+"query": "mutation UpdateTeam($input: UpdateTeamInput!) { updateTeam(input: $input) { id name description healthStatus createdAt updatedAt } }",
+"operationName": "updateTeam",
+"variables": {
+"input": {
+"id": "1a",
+"healthStatus": "<healthStatus>"
+}
+}
+}
+
+{
+"query": "mutation CreateTeam($input: CreateTeamInput!) { createTeam(input: $input) { id } }",
+"operationName": "CreateTeam",
+"variables": {
+"input": {
+"healthStatus": "UNHEALTHY",
+"name": "sampleTeam"
+}
+}
+}

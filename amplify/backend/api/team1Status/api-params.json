@@ -15,8 +15,8 @@
       "policyResourceName": "/status"
     }
   ],
-  "resourceName": "updateHealth",
-  "apiName": "updateHealth",
+  "resourceName": "team1Status",
+  "apiName": "team1Status",
   "functionArns": [
     {
       "lambdaFunction": "healthFunc"
@@ -25,8 +25,8 @@
   "privacy": {
     "auth": 1,
     "unauth": 1,
-    "authRoleName": "amplify-appsyncsubscriptions-dev-220542-authRole",
-    "unAuthRoleName": "amplify-appsyncsubscriptions-dev-220542-unauthRole"
+    "authRoleName": "amplify-appsyncsubscriptions-dev-135233-authRole",
+    "unAuthRoleName": "amplify-appsyncsubscriptions-dev-135233-unauthRole"
   },
   "dependsOn": [
     {

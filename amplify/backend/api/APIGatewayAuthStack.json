@@ -11,7 +11,7 @@
     "env": {
       "Type": "String"
     },
-    "updateHealth": {
+    "team1Status": {
       "Type": "String"
     }
   },
@@ -52,7 +52,7 @@
                       },
                       ":",
                       {
-                        "Ref": "updateHealth"
+                        "Ref": "team1Status"
                       },
                       "/",
                       {
@@ -82,7 +82,7 @@
                       },
                       ":",
                       {
-                        "Ref": "updateHealth"
+                        "Ref": "team1Status"
                       },
                       "/",
                       {
@@ -135,7 +135,7 @@
                       },
                       ":",
                       {
-                        "Ref": "updateHealth"
+                        "Ref": "team1Status"
                       },
                       "/",
                       {
@@ -165,7 +165,7 @@
                       },
                       ":",
                       {
-                        "Ref": "updateHealth"
+                        "Ref": "team1Status"
                       },
                       "/",
                       {
